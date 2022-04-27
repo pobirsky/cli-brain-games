@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import welcomingFunc from '../src/cli.js';
+import questionGuest from '../src/cli.js'
 
-welcomingFunc();
+questionGuest();
