@@ -14,3 +14,7 @@ brain-even
 brain-calc 
 
 [![asciicast](https://asciinema.org/a/K3bNSToEsTHxZcbcY4jfidh92.svg)](https://asciinema.org/a/K3bNSToEsTHxZcbcY4jfidh92)
+
+brain-prime
+
+[![asciicast](https://asciinema.org/a/WK80fan4S8DhUWGCNhgJQHbv1.svg)](https://asciinema.org/a/WK80fan4S8DhUWGCNhgJQHbv1)
