@@ -1,5 +1,5 @@
 # frontend-project-lvl1
-# **Hexlet backend-project-lvl1: console games**
+# **Hexlet frontend-project-lvl1: console games**
 
 ## **Hexlet tests and linter status:**
 
