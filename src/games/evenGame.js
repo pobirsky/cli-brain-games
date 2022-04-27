@@ -18,5 +18,4 @@ const startGame = () => {
   }
 };
 
-export { startGame };
-
+export default startGame;
