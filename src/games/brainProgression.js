@@ -19,8 +19,8 @@ function newProgression() {
 
 const generateRound = () => {
   const progression = newProgression();
-  const randIndex = 2;
-  // const randIndex = getRandomInteger(0, progression.lengh - 1);
+  // const randIndex = 2;
+  const randIndex = getRandomInteger(0, 5);
   const randomChangeIndex = progression[randIndex];
   const answer = String(randomChangeIndex);
 
