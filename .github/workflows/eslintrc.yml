@@ -7,4 +7,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
       - name: ESLint test
+        run: make install
         run: make lint
