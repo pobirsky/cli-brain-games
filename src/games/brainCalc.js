@@ -21,7 +21,7 @@ const generateRound = () => {
   const generateNumber2 = getRandomInteger(minNumber, maxNumber);
   const operations = ['-', '+', '*'];
   const randomOperator = operations[getRandomInt(3)];
-  const questionUser = `${generateNumber1}${randomOperator}${generateNumber2}`;
+  const questionUser = `${generateNumber1} ${randomOperator} ${generateNumber2}`;
   const answer = String(calculate(generateNumber1, generateNumber2, randomOperator));
   return [questionUser, answer];
 };
