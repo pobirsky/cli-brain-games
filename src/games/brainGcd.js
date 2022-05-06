@@ -5,7 +5,7 @@ function firstGcd(num1, num2) {
   return (num2 === 0) ? num1 : firstGcd(num2, num1 % num2);
 }
 
-const directive = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
   const num1 = getRandomInteger(1, 50);
@@ -16,4 +16,4 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => playGame(directive, generateRound);
+export default () => playGame(description, generateRound);

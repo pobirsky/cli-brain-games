@@ -1,7 +1,7 @@
 import getRandomInteger from '../rand.js';
 import playGame from '../index.js';
 
-const directive = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) return true;
@@ -15,13 +15,13 @@ const isPrime = (num) => {
   return flag;
 };
 
-const generateRpound = () => {
+const generateRound = () => {
   const num = getRandomInteger(1, 1000);
   const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 };
 
-const brainPrime = () => playGame(directive, generateRpound);
+const brainPrime = () => playGame(description, generateRound);
 
 export default brainPrime;

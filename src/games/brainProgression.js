@@ -3,7 +3,7 @@ import playGame from '../index.js';
 
 const maxLengthProgression = 10;
 const minLengthProgression = 5;
-const directive = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 function newProgression() {
   const step = getRandomInteger(1, 5);
@@ -30,6 +30,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const brainProgression = () => playGame(directive, generateRound);
+const brainProgression = () => playGame(description, generateRound);
 
 export default brainProgression;
