@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 const generateRpound = () => {
-  const num = getRandomInteger(1, 10);
+  const num = getRandomInteger(1, 1000);
   const question = num;
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
