@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+const getRandomInteger = (min, max) => min + Math.floor(Math.random() * (max - min));
+
 const countRounds = 3;
 
 const playGame = (description, generateRound) => {
@@ -23,4 +25,4 @@ const playGame = (description, generateRound) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default playGame;
+export { getRandomInteger, playGame };

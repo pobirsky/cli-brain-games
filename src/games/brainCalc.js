@@ -1,5 +1,4 @@
-import getRandomInteger from '../rand.js';
-import playGame from '../index.js';
+import { getRandomInteger, playGame } from '../utils.js';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);

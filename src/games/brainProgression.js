@@ -1,5 +1,4 @@
-import getRandomInteger from '../rand.js';
-import playGame from '../index.js';
+import { getRandomInteger, playGame } from '../utils.js';
 
 const maxLengthProgression = 10;
 const minLengthProgression = 5;

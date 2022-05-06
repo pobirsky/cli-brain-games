@@ -1,5 +1,4 @@
-import getRandomInteger from '../rand.js';
-import playGame from '../index.js';
+import { getRandomInteger, playGame } from '../utils.js';
 
 function firstGcd(num1, num2) {
   return (num2 === 0) ? num1 : firstGcd(num2, num1 % num2);
