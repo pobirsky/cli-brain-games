@@ -5,7 +5,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const directive = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const minNumber = 1;
 const maxNumber = 100;
 
@@ -26,6 +26,6 @@ const generateRound = () => {
   return [questionUser, answer];
 };
 
-const brainCalc = () => playGame(directive, generateRound);
+const brainCalc = () => playGame(description, generateRound);
 
 export default brainCalc;
