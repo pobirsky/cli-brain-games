@@ -1,4 +1,5 @@
-import { getRandomInteger, playGame } from '../utils.js';
+import generateRandom from '../utils.js';
+import playGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -15,10 +16,9 @@ const isPrime = (num) => {
 };
 
 const generateRound = () => {
-  const num = getRandomInteger(1, 1000);
-  const question = num;
+  const num = generateRandom(1, 1000);
   const answer = isPrime(num) ? 'yes' : 'no';
-  return [question, answer];
+  return [num, answer];
 };
 
 const brainPrime = () => playGame(description, generateRound);

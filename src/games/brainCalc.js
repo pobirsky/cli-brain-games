@@ -1,8 +1,5 @@
-import { getRandomInteger, playGame } from '../utils.js';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import generateRandom from '../utils.js';
+import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 const minNumber = 1;
@@ -22,12 +19,12 @@ const calculate = (number1, number2, operator) => {
 };
 
 const generateRound = () => {
-  const generateNumber1 = getRandomInteger(minNumber, maxNumber);
-  const generateNumber2 = getRandomInteger(minNumber, maxNumber);
+  const firstNumber = generateRandom(minNumber, maxNumber);
+  const secondNumber = generateRandom(minNumber, maxNumber);
   const operations = ['-', '+', '*'];
-  const randomOperator = operations[getRandomInt(operations.length)];
-  const question = `${generateNumber1} ${randomOperator} ${generateNumber2}`;
-  const answer = String(calculate(generateNumber1, generateNumber2, randomOperator));
+  const randomOperator = operations[generateRandom(0, 2)];
+  const question = `${firstNumber} ${randomOperator} ${secondNumber}`;
+  const answer = String(calculate(firstNumber, secondNumber, randomOperator));
   return [question, answer];
 };
 
