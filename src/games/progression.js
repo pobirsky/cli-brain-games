@@ -9,14 +9,14 @@ function generateRound() {
   const step = generateRandom(1, 5);
   const startElement = generateRandom(1, 100);
   const lengthOfProgression = generateRandom(minLengthProgression, maxLengthProgression);
-  const hiddenNumbers = generateRandom(0, lengthOfProgression);
+  const notVisibleNumber = generateRandom(0, lengthOfProgression);
   let question = '';
   for (let i = 0; i < lengthOfProgression; i += 1) {
     const nextElement = startElement + step * i;
-    question = (i !== hiddenNumbers) ? `${question} ${nextElement}` : `${question} ..`;
+    question = (i !== notVisibleNumber) ? `${question} ${nextElement}` : `${question} ..`;
   }
   question = question.trim();
-  const answer = String(startElement + step * hiddenNumbers);
+  const answer = String(startElement + step * notVisibleNumber);
   return [question, answer];
 }
 
