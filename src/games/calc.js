@@ -28,6 +28,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const brainCalc = () => playGame(description, generateRound);
+const calc = () => playGame(description, generateRound);
 
-export default brainCalc;
+export default calc;

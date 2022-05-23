@@ -21,6 +21,6 @@ const generateRound = () => {
   return [num, answer];
 };
 
-const brainPrime = () => playGame(description, generateRound);
+const prime = () => playGame(description, generateRound);
 
-export default brainPrime;
+export default prime;
