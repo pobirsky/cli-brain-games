@@ -1,4 +1,4 @@
-import generateRandom from '../utils.js';
+import { generateRandom } from '../utils.js';
 import playGame from '../index.js';
 
 const maxLengthProgression = 10;
@@ -9,18 +9,14 @@ function generateRound() {
   const step = generateRandom(1, 5);
   const startElement = generateRandom(1, 100);
   const lengthOfProgression = generateRandom(minLengthProgression, maxLengthProgression);
-  const randIndex = generateRandom(0, lengthOfProgression);
+  const hiddenNumbers = generateRandom(0, lengthOfProgression);
   let question = '';
   for (let i = 0; i < lengthOfProgression; i += 1) {
-    if (randIndex !== i) {
-      const nextElement = startElement + step * i;
-      question = `${question} ${nextElement}`;
-    } else {
-      question = `${question} ..`;
-    }
+    const nextElement = startElement + step * i;
+    question = (i !== hiddenNumbers) ? `${question} ${nextElement}` : `${question} ..`;
   }
   question = question.trim();
-  const answer = String(startElement + step * randIndex);
+  const answer = String(startElement + step * hiddenNumbers);
   return [question, answer];
 }
 
